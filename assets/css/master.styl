@@ -1,0 +1,141 @@
+base()
+normalize()
+
+gold = #EEC977
+gray = #2E2A2B
+
+html
+	padding 20px
+
+.container
+	// see: ISO/IEC 7810
+	width 85.60mm
+	height 53.98mm
+
+	position: relative
+	margin: 0 auto 40px
+	perspective: 800px
+	filter: drop-shadow(0 0 10px rgba(0,0,0,0.3))
+
+#card
+	font-family: 'Oxygen', sans-serif;
+	width: 100%
+	height: 100%
+	position: absolute
+	-webkit-transition: -webkit-transform 1s
+	-moz-transition: -moz-transform 1s
+	-o-transition: -o-transform 1s
+	transition: transform 1s
+	transform-style: preserve-3d
+	transform-origin: right center
+
+	&.flipped
+		transform: translateX(-100%) rotateY(-180deg)
+
+	figure
+		display: block
+		height: 100%
+		width: 100%
+		padding 4mm
+		box-sizing border-box
+		position absolute
+		backface-visibility hidden
+		background-size fill
+		background-repeat no-repeat
+
+	.front, .back
+		background-image url('/img/lines.svg')
+		background-size auto 100%
+		background-position center center
+
+	.front
+		background-color gray
+		z-index 2
+		position absolute
+
+		&:before
+			content ''
+			position absolute
+			background-image url('/img/cover.svg')
+			background-size auto 100%
+			z-index -1
+			top 0
+			bottom 0
+			left 0 
+			right 0
+
+	.back
+		background-color white
+		transform: rotateY(180deg)
+
+		.wrap
+			box-sizing border-box
+			padding 1mm
+			background rgba(256, 256, 256, 0.7)
+			height 100%
+			font-size 3mm
+	
+	a
+		text-decoration none
+		display block
+
+	[itemprop="name"]
+		color gold
+		font-weight bold
+		font-size 5.5mm
+		text-transform uppercase
+
+	[itemprop="email"]
+	[itemprop="telephone"]
+	[itemprop="url"]
+	[itemprop="address"]
+		&:before
+			color gray
+			position relative
+			font-weight bold
+			width 4mm
+			height 4mm
+			margin-right 1mm
+			display inline-block
+			content: ''
+			background-size contain
+			background-repeat no-repeat
+			background-position center
+			vertical-align middle
+
+	[itemprop="address"]:before
+		background-image url('/img/map_pin_stroke.svg')
+
+	[itemprop="email"]:before
+		background-image url('/img/mail.svg')
+
+	[itemprop="telephone"]:before
+		background-image url('/img/phone.svg')
+
+	[itemprop="url"]:before
+		background-image url('/img/link.svg')
+
+#mainJobTitle, #ampJobTitle, #subJobTitle
+	color white
+	margin-top 2mm
+
+#mainJobTitle
+	width 40mm
+
+#mainJobTitle, #subJobTitle
+	display inline-block
+
+#ampJobTitle
+	font-size 3mm
+
+#subJobTitle
+	width 30mm
+	color gold
+
+#flip
+	border none
+	margin auto
+	display block
+	background url('/img/flip.svg') no-repeat
+	background-size 100% 100%
+	size 80px 40px
