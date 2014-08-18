@@ -30,8 +30,6 @@ x^2 + 6x + 8   = 0
 x              = -2, -4
 ```
 
-You could argue that, in solving an equation, all the steps are related because they form a sequence of transformations to the same equation; so grouping them in this way makes more sense than aligning a set of individual assignments in a program. However, assignments tend to be grouped together logically at the beginning of a method, module, or class - showing that they are all variables used in that particular section of the program. This means that if you are looking for a variable used in a particular section of a program, the first place you would look is the beginning of that section, showing that they _are_ all related, even though each operation is separate.
-
 Another example of where alignment is useful is multi-dimensional matrices. While these are fairly rare in practice (I couldn't even find an example of one, in a popular library, where the constants weren't already the same length), they should to be taken into account because they look bad when not aligned properly, and usually need to be edited as if they were tables:
 
 ```
@@ -66,7 +64,6 @@ CoffeeScript = require './coffee-script'
 compile      = CoffeeScript.compile
 CoffeeScript.require = require
 ```
-
 
 Or should a line-break be introduced just to separate the aligned block and the unaligned block?
 
