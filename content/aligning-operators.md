@@ -1,5 +1,5 @@
 # Aligning Operators
-If you’ve been coding for a sufficiently long time, you’ve surely come across the formatting debate between aligning operators, and surrounding them with a single space (unaligned).
+If you've been coding for a sufficiently long time, you've surely come across the formatting debate between aligning operators, and surrounding them with a single space (unaligned).
 
 Aligned looks like this:
 
@@ -150,7 +150,7 @@ The point at which this kind of alignment stops improving readability and starts
 A programmer shouldn't need to spend time thinking about any of these rules, or their effects on code readability. Determining how to correctly format their code is an additional cognitive burden that distracts from more important things like ensuring that code works properly. In short: we have more important things to worry about.
 
 ### Maintenance
-Also, editing a single line in a block of aligned statements can require all the other statements to be realigned. A programmer shouldn't need to spend time maintaining alignment as code is changed. This _can_ be automated with in-editor tools, but ensuring that those tools are used consistently, by all collaborators, is an unnecessary burden and a waste of time.
+Editing a single line in a block of aligned statements can require all the other statements to be realigned. A programmer shouldn't need to spend time maintaining alignment as code is changed. This _can_ be automated with in-editor tools, but ensuring that those tools are used consistently, by all collaborators, is an unnecessary burden and a waste of time.
 
 In addition, depending upon these alignment tools (especially ones that are integrated with a particular editor) can cause problems when doing mass-renames of identifiers or when using tools that a particular alignment tool isn't integrated with. This is because you would either need to manually run the tool on every file that was changed, or the tool would need to be advanced enough to watch for changed files, and run constantly in the background.
 
@@ -174,7 +174,6 @@ _    = require 'lodash'
 
 ...but because of alignment, we also need to change the other 2 lines, resulting in this:
 
-
 ```coffee
 W = require 'when'
 _ = require 'lodash'
@@ -183,7 +182,7 @@ _ = require 'lodash'
 ...now, through the removal of one line, we have caused all the lines to be changed, increasing the size of the diff, and breaking the ability to use `blame` to find where the other two lines were introduced or last modified. When these alignment changes are applied to entire projects (rather than small code snippets), it results in the history being cluttered with trivial formatting changes, making navigation and searching more difficult.
 
 ### Assumptions
-Using alignment also makes an assumption that many programmers may not think about. While monospace fonts are very common in programming, not everyone uses them. So, additional spaces to get operators to align vertically just shows up as useless whitespace for people who are using proportional fonts.
+Using alignment makes an assumption that many programmers may not think about. While monospace fonts are very common in programming, not everyone uses them. So, additional spaces to get operators to align vertically just shows up as useless whitespace for people who are using proportional fonts.
 
 ## A Proposal
 While alignment can make code easier to read, standardizing its use, and preventing its side-effects on VCSes and code maintenance isn't possible if the alignment is hard-coded into the source.
