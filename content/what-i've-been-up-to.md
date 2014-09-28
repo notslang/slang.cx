@@ -1,7 +1,9 @@
 # What I've Been Up To Recently
+## Carrot Creative
+After about half a year of college at [MSOE](http://msoe.edu) I became bored with the rudimentary classes they offered and decided to drop out, move to Brooklyn, and join [Carrot Creative](http://carrot.is). You can read more [here](http://carrot.is/blogging/welcome/sean).
 
 ## Web Development With Jade
-[Packt Publishing](http://www.packtpub.com/) approached me, requesting that I write a book about web development with [Jade](http://jade-lang.com/), since I have contributed code and user support for the  Jade compiler on several occasions. I agreed to work with them, and I'll be finishing my first book some time in early September.
+[Packt Publishing](http://www.packtpub.com/) approached me, requesting that I write a book about web development with [Jade](http://jade-lang.com/), since I contribute code and user support for the Jade compiler. I agreed to work with them, and the resulting book is now published. You can get the source [here](https://github.com/slang800/jade-book) and buy it [here](http://www.packtpub.com/create-dynamic-web-pages-using-jade/book)
 
 ## Nib
 I've taken over all future development for [nib](http://visionmedia.github.io/nib/), the most popular CSS library for Stylus. A project that eliminates redundant CSS with automatic vendor prefixing and a variety of mixins to improve your CSS. I've also begun a merge between nib and a similar library known as [axis](http://roots.cx/axis/). Since axis has a similar goal, pulling it into nib can benefit everyone.
