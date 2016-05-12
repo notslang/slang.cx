@@ -1,13 +1,14 @@
 {
   "name": "slang.cx",
   "description": "",
-  "dependencies": {
-    "jade": "1.x",
-    "marked": "0.3.x",
-    "stylus": "0.43.x",
-    "coffee-script": "1.7.x",
-    "autoprefixer-stylus": "0.0.4",
-    "axis-css": "0.2.x",
-    "rupture": "0.0.3"
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.9.2",
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.6",
+    "gulp-jade": "^1.1.0",
+    "gulp-stylus": "^2.3.1",
+    "marked": "^0.3.5",
+    "nib": "^1.1.0"
   }
 }
