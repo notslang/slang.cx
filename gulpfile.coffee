@@ -1,13 +1,19 @@
 autoprefixer = require 'autoprefixer-stylus'
 cleanCSS = require 'gulp-clean-css'
+data = require 'gulp-data'
+frontMatter = require 'gulp-front-matter'
 gulp = require 'gulp'
-jade = require 'gulp-jade'
+jade = require 'pug'
+map = require 'through2'
+marked = require 'gulp-marked'
+rename = require 'gulp-rename'
 stylus = require 'gulp-stylus'
+fs = require 'fs'
 
 paths =
   staticContent: 'assets/{img,*}'
   styles: 'assets/css/**/*.styl'
-  markup: 'views/*'
+  markup: 'content/*'
 
 gulp.task 'stylus', ->
   gulp.src(
@@ -38,6 +44,25 @@ gulp.task 'markup', ->
     jade()
   ).pipe(
     gulp.dest 'public'
+  )
+
+getTemplate = ->
+  jade.compile(fs.readFileSync('./views/layout.jade'))
+
+gulp.task 'markup', ->
+  template = getTemplate()
+  gulp.src(
+    paths.markup
+  ).pipe(frontMatter(
+    property: 'frontMatter'
+    remove: true
+  )).pipe(
+    marked()
+  ).pipe(map(objectMode:true, (file, enc, cb) ->
+    file.contents = new Buffer(template(content: file.contents.toString()))
+    cb(null, file)
+  )).pipe(
+    gulp.dest('./public')
   )
 
 gulp.task 'watch', ->
