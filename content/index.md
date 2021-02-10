@@ -11,10 +11,12 @@ I respond quickest to email, so that is the best way to message me. My phone num
 
 ## Places You Can Find Me
 
-I'm pretty active on the Internet, so there are quite a few sites where you can find me. In order of activity, these include:
+There are quite a few sites where you can find me. In order of activity, these include:
 
-- [GitHub](https://github.com/slang800)
-- [Hacker News](https://news.ycombinator.com/user?id=slang800)
+- [github](https://github.com/notslang)
+- [gitlab](https://gitlab.com/slang)
+- [hacker news](https://news.ycombinator.com/user?id=slang800)
+- [lobsters](https://lobste.rs/u/slang)
 - [npm](https://www.npmjs.org/~slang)
 - [Genius](http://genius.com/slang800)
 - [Keybase](https://keybase.io/slang)
