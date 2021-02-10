@@ -4,57 +4,73 @@ https://keybase.io/slang
 
 I hereby claim:
 
-  * I am an admin of http://slang.cx
+  * I am an admin of https://slang.cx
   * I am slang (https://keybase.io/slang) on keybase.
   * I have a public key with fingerprint 9A7C 41E7 279F 8032 42FE  AF31 F6D1 7F02 3968 6E16
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "fingerprint": "9a7c41e7279f803242feaf31f6d17f0239686e16",
-            "host": "keybase.io",
-            "key_id": "f6d17f0239686e16",
-            "uid": "1d39f04937d9f42d82e88e26435f1200",
-            "username": "slang"
-        },
-        "service": {
-            "hostname": "slang.cx",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "01014f384bebf890c56b0704d7eb353c5ab12ed37ee9fe504b44d20e850ed465f8300a",
+      "fingerprint": "9a7c41e7279f803242feaf31f6d17f0239686e16",
+      "host": "keybase.io",
+      "key_id": "f6d17f0239686e16",
+      "kid": "01014f384bebf890c56b0704d7eb353c5ab12ed37ee9fe504b44d20e850ed465f8300a",
+      "uid": "1d39f04937d9f42d82e88e26435f1200",
+      "username": "slang"
     },
-    "ctime": 1399064942,
-    "expire_in": 157680000,
-    "prev": "da6e3b3ca4ec5fbd8d1e405cd6ec761b77a921333251b71cc306ef98c4e78500",
-    "seqno": 3,
-    "tag": "signature"
+    "merkle_root": {
+      "ctime": 1564422238,
+      "hash_meta": "99081de3fc8ce88eba630b07ead0d4f92c06d25f3e75dd19f57a2aff08b04e14",
+      "seqno": 5878737
+    },
+    "revoke": {
+      "sig_ids": [
+        "f09a065ce6384d9ff47a4c817f7405552454456fee6c9493f35f4040bb5971580f"
+      ]
+    },
+    "service": {
+      "hostname": "slang.cx",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1564422239,
+  "expire_in": 157680000,
+  "prev": "7527b80a4036d2f3b9569bbb59f7649f7c5327f39664830a07a6b3822f05cc95",
+  "seqno": 12,
+  "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v0.1.14
+Version: Keybase OpenPGP v2.1.0
 Comment: https://keybase.io/crypto
 
-yMHhAnicbZFbSBRvGMZ3Pa2uB7yojIJYhoLS1Wbmm9O3RRl/O0ot5bIQmdscvlkH
-bWb/swe1ZTEtiQrSQuhwkVZg4UWUSepFZqWICGHQAaksoSClkNC6iCS/WQq6aG4+
-3uf9Pc87L+9wbqrNaX8w+WLmzf6z0/bxodmorULJ0uOEZCgNhCdO1KDko2p6EJkh
-U9MjhIeAIi8zFOJpHqoCCWiGVpGoAkrlFIpXSRpATuAQxRFuotoIWw4cI4lhVKIZ
-WMNFQFOw+g8+mmxQCoAqyUDAK1BlaEWgkSAgmmMAq1I0SVpgGJm6eBRhOlwr6kEi
-4SawFNNkLMWTc/9ul8j12BQyjYghG7VYrY5EQh7LFGkIWVQdkgK//QFJ0xW8MDbE
-kBnWDJ3wUJiUI5oVSAEISY6BDO0mUH1IM1FAswiW5wQSf9YYFMORisghIAFZZJDM
-qpIiKBRiSFZWOCTzHCXxvAhpCgBAs7igZBmQHFKhIDOIF9jklmH0v24QHoB/Uwxa
-u2hBXYxETUQkHg9VptnsTltGeop1MpszK//PIftijl9ly9nXOW3D0oqBfv+J+6G5
-1g29xfFmKfHSnzrvPbe9wjG3rqx5ZWNLL+yJd7tL4L2q4ouO4LLjnafE8jzmh+sK
-fDTkWpxuy+xe/b05/0vTKvJ94x7vVGl/zT5xLPdn2uR8Zaur8NUTf9OCqrQ33PZm
-j5Ty5GKlb6CnaFPjta97M4ILx6Jg88bODoadrptL+BNjI13eHekLo11PMz+44mtO
-P6wq7Gqrunqdi7X4JpxbDpyc2XU5pf35Tt/BkbpLb79pU7sHDxeX35ovunmeXGuv
-9X3OutHyzOEofFcwunVWmsjL74vT43cPXYh1ZH/62Lmo3Zk989+RnKaC9YM96rYl
-ksQMtw==
-=CD7q
+yMK2AnicrVNbbBVFGD6tIFpCLBrRB6hxwZiYWmbnvidgmyBGwUvAyANQN7M7/5xu
+zunuYXdbis0hUa5eAqaaGGIICQ+oiUGMeInaxDQawSoUTVESSK0EIzUYHxQftOhs
+o9EYH92H2czM93//930z8+G8q0otTcNnxi+eXfP0ZNPoSNJX6u5E/qATJHqLUx50
+qjDzg5qGLPerkXbKDnKRSw2RNIDASA+FjAdIIKoFBISRkKnAxaCJAPAMMEQDSjVG
+IBkCTTkzkiCknHbHRHEF0noaxbml9ZQIqQsCC89IRDDFBpQhruHaFQZh4nHJweW2
+sCfJigorLlAZdESJXbMTf0bef+D/Z919M3SuJp5B1CNCe4ZiLTFICZhTwoyLESqA
+GaSx6gWLzmoqrjiNdqcX0moN/DRJ8iLZMI+KfZdxSjHGRFp3KuvxeyFXRSgekq4G
+YkIZFvSB4gRZ1aA00tR4OERcY2YICKa16xkmFFbGIBkgCi61IjLYFCdOmUkhBRFW
+QQr9SRWK5llUsZllTnmDY5CnEGchcBuQNWSoUDSUNklBEWMMU0Yp4waAh541baxL
+iigKAuYJl0lknO5G0Sztj8IZ8uKQ/mm+IxywauppkidhUrOrPXlez8pFJvmWegHb
+DIH/J4EfRLG218NW9EOaRUlsM7LIf8fltTswUI9S8KMCwQSXyH5FH+i3lIJhEUik
+KCI2J0MCj3EvKEQbwakdQkawMPaucGqPVyGheEAkxgaxMPTY3/m52OpUlcJNVIlV
+3peC0xj5YOOsUlNL6erZzcW7KbVc2/rXazoRz5lue+q3WbPL69ZupS99ffOrS15+
+78b1376yIRnbNTRw/MK5sbffGnly/FJj/q45p06vXDx1zHR9+bN21tzJ5i7bffzB
+xj3PrYunbnq2b8Wh5UsvLDr/YtstQ9+sboku7z45fvHdY6TtyjsH663bVt1+Od74
+xr7t5cmF4Z6t/vDhttN3HFn/62P3Hp16lC2e+Grnw52rakeGlnR/5PU0f/7Q/EUn
+r7lhesXk/s7nfz/aufPMvLWv/fLDMzsudR0Mq1ceP3/fgo7th8f2v/7p3s9WN5Pv
+JkcH7x89cf33y6edPfnCiX3XHWi0tg6fq/y4Q3yx981tSz+Zq3HYxTc9clb+dNuC
+U3ffdeDWj6c2v7Dsife7eiceWPkH7px/7A==
+=lYvE
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -63,3 +79,4 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/slang
 
 ==================================================================
+
