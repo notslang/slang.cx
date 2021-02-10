@@ -1,4 +1,5 @@
 # Sean Lang
+
 Hello! I'm Sean Lang, but most people call me slang. I spend my time working on software development and I am especially interested in data science.
 
 ## Contact Info
@@ -18,10 +19,5 @@ There are quite a few sites where you can find me. In order of activity, these i
 - [hacker news](https://news.ycombinator.com/user?id=slang800)
 - [lobsters](https://lobste.rs/u/slang)
 - [npm](https://www.npmjs.org/~slang)
-- [Genius](http://genius.com/slang800)
-- [Keybase](https://keybase.io/slang)
-- [Google+](https://google.com/+SeanLang)
-- [Twitter](https://twitter.com/slang800)
-- [last.fm](http://last.fm/user/slang800)
-- [Facebook](https://www.facebook.com/slang800)
-- [Instagram](https://www.instagram.com/slang800/)
+- [keybase](https://keybase.io/slang)
+- [sourcehut](https://git.sr.ht/~slang/)
