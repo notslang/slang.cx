@@ -1,6 +1,12 @@
 # Sean Lang
 
-Hello! I'm Sean Lang, but most people call me slang. I spend my time working on software development and I am especially interested in data science.
+Hello! I'm Sean Lang. On the internet I'm either slang or notslang.
+
+## Blog Posts
+
+- [How to Migrate a Database from MySQL to Heroku Postgres](/migrate-from-mysql-to-postgres) (2023-10-06)
+- [Pre-Commit Hooks are Almost Always a Bad Idea](/pre-commit-hooks) (2023-03-24)
+- [Reverse-Engineering Instagram IDs](/instagram-id) (2015-04-16)
 
 ## Contact Info
 
@@ -12,7 +18,7 @@ I respond quickest to email, so that is the best way to message me. My phone num
 
 ## Places You Can Find Me
 
-There are quite a few sites where you can find me. In order of activity, these include:
+There are quite a few sites where you can find me. These include:
 
 - [github](https://github.com/notslang)
 - [gitlab](https://gitlab.com/slang)
