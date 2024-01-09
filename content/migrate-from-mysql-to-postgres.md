@@ -60,7 +60,7 @@ pgloader --with "preserve index names" \
 
 The argument `--with "preserve index names"` prevents indexes from being renamed to avoid conflicts. See [this issue](https://github.com/dimitri/pgloader/issues/187) for a more complete explanation. If you have multiple tables in MySQL that have the same index names then you may need to remove that arg and rename the indexes manually using SQL commands like `ALTER INDEX idx_1234_my_index RENAME TO my_index_mytable` or some better naming scheme.
 
-Now there's a little cleanup to do before we can copy our PostgreSQL database into Heroku. First, `pgloader` created a new schema with the name of our database `mydatabase` and each of our tables is inside that scheama. You probably don't want that, so we move each table into the public schema. For example:
+Now there's a little cleanup to do before we can copy our PostgreSQL database into Heroku. First, `pgloader` created a new schema with the name of our database `mydatabase` and each of our tables is inside that schema. You probably don't want that, so we move each table into the public schema. For example:
 
 ```bash
 psql -U postgres -h 0.0.0.0 -d mydatabase -c "ALTER TABLE mydatabase.accounts SET SCHEMA public"
