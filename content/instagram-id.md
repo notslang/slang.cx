@@ -1,3 +1,5 @@
+# Reverse-Engineering Instagram IDs
+
 As part of our analytics department at Carrot, we do quite a bit of programmatic scraping of social platforms to gather data on how our posts are performing. Internally, this is a part of a project called "Sherlock", which we built to automate all of our data-gathering & querying tasks. This post is not about Sherlock; it's about an observation I made while updating one of Sherlock's Instagram scrapers.
 
 If you look at the Instagram API, it has ids that look like `908540701891980503_1639186`, for each post, but they don't use those ids in their post URLs - they use a different type of id that looks like `ybyPRoQWzX`. This is, of course, pretty weird to have 2 identifiers for the same post. But, if you look at the identifiers of several posts, and how their numbers correlate, it becomes obvious that there's a connection between these 2 types of identifier.
@@ -74,18 +76,22 @@ number | letter
 
 It's basically the same encoding table that's used in the standard character-representation of base64, except the `+` and `/` characters are replaced with `-` and `_`, respectively. This replacement is probably because `/` is a special character in URLs, and `+` is a special character in query strings.
 
-# Implications
+## Implications
+
 By knowing how these 2 types of ids are linked, we learn a few things about Instagram.
 
-## Uniqueness / Extra Data
+### Uniqueness / Extra Data
+
 We already know that the id they use in their URL is unique across all of Instagram, based on the URL structure: `https://instagram.com/p/ybyPRoQWzX`. But since that is able to be converted into the first section of their numeric ID, we know that the first section of their numeric id is also unique across all of Instagram, even without the second part used to identify the user.
 
 Surprisingly, this uniqueness of the first part of the numeric id actually translates to the workings of their internal API. By inspecting the requests made by Instagram's website, we can see that the normal format for getting posts by a given user is `https://instagram.com/<username>/media/?max_id=<numeric id>` (like `https://instagram.com/gitamba/media/?max_id=915362118751716223_7985735`). But the API will actually still work if you omit the "user part" of the numeric id (like `https://instagram.com/gitamba/media/?max_id=915362118751716223`). In fact, the underscore in that id, and everything after it is completely ignored, so a request like `https://instagram.com/gitamba/media/?max_id=915398248830305252_whatever` will still return exactly the same response as the previous 2 examples. It's likely that filtering down to a particular user's posts is done with the first segment of the URL, making it a mystery as to why they include the user-specific section of the id in the `max_id` field at all.
 
-## Convertibility
+### Convertibility
+
 The most important implication (for me) is that I don't need to store their base10 id in Sherlock's database at all, because it can be recreated entirely just by transforming the base64 id they use in their URL.
 
-## Further Analysis
+### Further Analysis
+
 There's a little more information you can get from an Instagram id, if you happen to know [how they make them](http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram). They don't mention what their internal epoch is, but knowing the dates associated with some ids, we can calculate it with pretty good accuracy. The following is a table of example posts that I gathered the creation times for.
 
 post id  (base 10) | known post created time (unix time)
@@ -124,7 +130,8 @@ Anyway, now that we know the epoch, we can convert all the way from a URL of an 
 
 You can also get the ID of the Instagram shard that the post was processed on from the id, which might be interesting if those shards are distributed geographically and in a way that is usually closest to the user, but that's an idea for another post.
 
-# Ids Used in Testing
+## Ids Used in Testing
+
 These are the ids that I used to create the tables earlier in the post. The 2 shorter ones are from 2011, when they used auto-incrementing ids.
 
 id in base 10      | id in base64                  | converted to chars
