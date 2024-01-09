@@ -7,6 +7,7 @@ Hello! I'm Sean Lang. On the internet I'm either slang or notslang.
 - [Monitoring Oban Worker Memory and CPU Usage](/oban-resource-usage-telemetry) (2023-11-20)
 - [How to Migrate a Database from MySQL to Heroku Postgres](/migrate-from-mysql-to-postgres) (2023-10-06)
 - [Pre-Commit Hooks are Almost Always a Bad Idea](/pre-commit-hooks) (2023-03-24)
+- [A Cleaner Way to Organize Ecto Schema Fields](/clean-ecto-schema) (2022-07-08)
 - [Reverse-Engineering Instagram IDs](/instagram-id) (2015-04-16)
 
 ## Contact Info
