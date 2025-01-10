@@ -4,6 +4,7 @@ Hello! I'm Sean Lang. On the internet I'm either slang or notslang.
 
 ## Blog Posts
 
+- [Should I Merge One Feature Branch Into Another Feature Branch?](/merging-into-a-feature-branch) (2024-09-19)
 - [Monitoring Oban Worker Memory and CPU Usage](/oban-resource-usage-telemetry) (2023-11-20)
 - [How to Migrate a Database from MySQL to Heroku Postgres](/migrate-from-mysql-to-postgres) (2023-10-06)
 - [Pre-Commit Hooks are Almost Always a Bad Idea](/pre-commit-hooks) (2023-03-24)
