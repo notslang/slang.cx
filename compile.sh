@@ -3,7 +3,7 @@
 mkdir -p ./tmp
 mkdir -p ./public
 
-for file in $(ls ./content)
+for file in $(ls ./content/*.md)
 do
     file=$(basename $file .md)
     cmark-gfm --extension table ./content/$file.md > ./tmp/$file.html
@@ -12,3 +12,5 @@ do
         r tmp/'$file'.html
     }' template.html > ./public/$file.html
 done
+
+cp ./content/*.svg ./public/
