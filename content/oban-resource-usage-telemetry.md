@@ -141,9 +141,3 @@ You may be tempted to emit metrics that are more granular, like tagging by Oban 
 So, if your tag is the name of the worker module and you have 100 different worker modules in your system, then you have a cardinality of 100 (pretty reasonable). If your tag is the job id, then your cardinality is equal to the number of jobs that your system runs, which is unbounded and could easily be billions.
 
 Having a very high cardinality becomes a problem in aggregating metrics because each individual tag (or combination of tags) needs to have stats aggregated separately. For example, to get an average we would have to track the count and sum for each combination of tags. With a cardinality of 100, that hardly takes up any memory at all. With an unbounded cardinality your memory usage grows forever.
-
-
-- implement with telemetry + phoenix live dash, but mention that results can be exported into graphana or datadog
-- talk about cardinality of metrics (why you don't want to use job ID as a tag)
-- code examples for setting up telemetry
-- structure of Oban workers and which processes to monitor
